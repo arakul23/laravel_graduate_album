@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class DepartmentController extends Controller
 {
     function getByFacultyId(Request $request) {
-        return $departmentsList = Department::where('id_faculty', $request->id)->get();
+      $departmentsList = Department::where('id_faculty', $request->id)->get();
+      return view ("departments", ["departments" => $departmentsList]);
     }
 }

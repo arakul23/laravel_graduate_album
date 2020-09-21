@@ -22,5 +22,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/departments/{id}', 'DepartmentController@getByFacultyId');
+Route::get('/students/{id}', 'StudentController@getByDepartmentId');
 
 Route::view('/portfolio', 'portfolio');
