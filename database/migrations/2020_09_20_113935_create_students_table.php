@@ -20,6 +20,8 @@ class CreateStudentsTable extends Migration
             $table->string('patronymic');
             $table->integer('id_country')->unsigned();
             $table->integer('id_city')->unsigned();
+            $table->integer('id_faculty')->unsigned();
+            $table->integer('id_department')->unsigned();
             $table->timestamps();
         });
     }

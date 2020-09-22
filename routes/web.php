@@ -23,5 +23,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/departments/{id}', 'DepartmentController@getByFacultyId');
 Route::get('/students/{id}', 'StudentController@getByDepartmentId');
+Route::get('/parse', 'CountryController@parseCountriesFile');
+Route::get('/admin', function() {
+  return view('admin/dashboard');
+});
 
 Route::view('/portfolio', 'portfolio');
