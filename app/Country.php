@@ -16,7 +16,7 @@ class Country extends Model
       $error = "failed";
       dd($error);
     }
-    
+
     $country = new Country;
     $country->name = trim($name);
     $country->save();
