@@ -16,4 +16,8 @@ class Student extends Model
       return Student::where('id_department', $id)->get();
     }
 
+    public function byId($id) {
+        return Student::where('id', $id)->get();
+    }
+
 }
