@@ -7,7 +7,7 @@
 
         <nav role="navigation" class="probootstrap-nav hidden-xs">
             <ul class="probootstrap-main-nav">
-                <li class="active"><a href="{{url('index')}}">Home</a></li>
+                <li><a href="{{url('/')}}">Home</a></li>
                 <li><a href="{{url('portfolio')}}">Portfolio</a></li>
                 <li><a href="products.html">Product</a></li>
                 <li><a href="about.html">About</a></li>
@@ -35,5 +35,5 @@
             </div>
         </div>
     </div>
-    <a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a>
+    <a class="probootstrap-scroll-down js-next" href="#next-section">Пролистать вниз <i class="icon-chevron-down"></i></a>
 </section>

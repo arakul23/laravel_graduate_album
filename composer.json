@@ -6,6 +6,12 @@
         "framework",
         "laravel"
     ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/packages/slick-1.8.1"
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.3",
@@ -13,7 +19,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
-        "phpoffice/phpspreadsheet": "^1.14"
+        "phpoffice/phpspreadsheet": "^1.14",
+        "slick/slick": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",

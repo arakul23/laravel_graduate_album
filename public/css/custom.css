@@ -1,1 +1,8 @@
-/* Your custom css code goes here */
+.student_photo_slider {
+  max-height: 150px;
+}
+
+.student_photo_slider img {
+  height: 150px;
+}
+
