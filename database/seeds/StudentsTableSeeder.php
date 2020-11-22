@@ -1,0 +1,21 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Student;
+use Illuminate\Database\Seeder;
+
+class StudentsTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Student::factory()
+            ->times(50)
+            ->create();
+    }
+}
