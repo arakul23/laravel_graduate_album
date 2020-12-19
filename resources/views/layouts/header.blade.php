@@ -7,21 +7,11 @@
 
         <nav role="navigation" class="probootstrap-nav hidden-xs">
             <ul class="probootstrap-main-nav">
-                <li><a href="{{url('/')}}">Home</a></li>
-                <li><a href="{{url('portfolio')}}">Portfolio</a></li>
-                <li><a href="products.html">Product</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{{url('/')}}">Главная</a></li>
+                <li><a href="{{url('faculties')}}">Факультеты</a></li>
+                <li><a href="{{url('departments')}}">Специальности</a></li>
+                <li><a href="{{url('students')}}">Студенты</a></li>
             </ul>
-            <div class="extra-text visible-xs">
-                <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
-                <h5>Social</h5>
-                <ul class="social-buttons">
-                    <li><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li><a href="#"><i class="icon-facebook"></i></a></li>
-                    <li><a href="#"><i class="icon-instagram2"></i></a></li>
-                </ul>
-            </div>
         </nav>
     </div>
 </header>
