@@ -13,10 +13,13 @@ class CreateCitiesTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('cities');
+
         Schema::create('cities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('id_country')->unsigned();
+            $table->integer('region_id')->nullable(false);
+            $table->integer('province_id');
             $table->timestamps();
         });
     }
