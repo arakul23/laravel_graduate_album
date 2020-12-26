@@ -24,7 +24,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/departments/{id}', 'FacultyController@getDepartmentsByFacultyId');
 Route::get('/students/{id}', 'departmentController@getStudentsByDepartmentId');
 Route::get('/studentInfo/{id}', 'StudentController@getById');
-Route::get('/parse', 'CountryController@parseCountriesFile');
+Route::get('/parseCountries', 'CountryController@parseCountriesFile');
+Route::get('/parseRegions', 'ServiceController@parseRegionsFile');
+Route::get('/parseRegionsProvinciesCitiesFile', 'ServiceController@parseRegionsProvinciesCitiesFile');
 Route::get('/admin', function() {
   return view('admin/dashboard');
 });
