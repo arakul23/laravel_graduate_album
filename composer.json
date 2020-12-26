@@ -17,10 +17,12 @@
         "php": "^7.3",
         "doctrine/dbal": "^2.11",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "^8.0",
+        "laravel/framework": "^8.1",
         "laravel/tinker": "^2.0",
         "phpoffice/phpspreadsheet": "^1.14",
-        "slick/slick": "*"
+        "aws/aws-sdk-php": "~3.0" ,
+        "pda/pheanstalk" : "~4.0",
+        "predis/predis": "~1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
