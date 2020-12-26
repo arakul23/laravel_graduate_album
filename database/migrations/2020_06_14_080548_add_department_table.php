@@ -17,7 +17,8 @@ class AddDepartmentTable extends Migration
             $table->bigIncrements('id');
             $table->text('name');
             $table->text('photo');
-            $table->integer('id_faculty');
+            $table->integer('faculty_id');
+            $table->integer('count_views')->default(0);
             $table->timestamps();
         });
     }

@@ -18,10 +18,11 @@ class CreateStudentsTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('patronymic');
-            $table->integer('id_country')->unsigned();
-            $table->integer('id_city')->unsigned();
-            $table->integer('id_faculty')->unsigned();
-            $table->integer('id_department')->unsigned();
+            $table->integer('country_id')->unsigned();
+            $table->integer('city_id')->unsigned();
+            $table->integer('faculty_id')->unsigned();
+            $table->integer('department_id')->unsigned();
+            $table->integer('count_views')->default(0);
             $table->timestamps();
         });
     }

@@ -1,15 +1,31 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+namespace Database\Factories;
 
-use App\Model;
+use App\Department;
 use App\Faculty;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(\App\Department::class, function (Faker $faker) {
-    return [
-        "name" => $faker->name,
-        "photo" => "/public/img/noimg.jpg",
-        "id_faculty" => Faculty::all()->random()->id,
-    ];
-});
+class DepartmentFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Department::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            "name" => $this->faker->name,
+            "photo" => "/public/img/noimg.jpg",
+            "faculty_id" => Faculty::all()->random()->id,
+        ];
+    }
+}

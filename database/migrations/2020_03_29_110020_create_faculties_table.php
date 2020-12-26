@@ -17,6 +17,7 @@ class CreateFacultiesTable extends Migration
             $table->bigIncrements('id');
             $table->text('name');
             $table->text('photo');
+            $table->integer('count_views')->default(0);
             $table->timestamps();
         });
     }
