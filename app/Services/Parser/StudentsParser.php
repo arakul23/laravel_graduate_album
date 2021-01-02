@@ -15,10 +15,22 @@ class StudentsParser extends AbstractParser
         return new Xlsx();
     }
 
-    public function parseStudents() {
+    public function parse() {
         $xls = $this->createObject();
-        $fileRead = $xls->load('students.xlsx');
-        $worksheet = $fileRead->getActiveSheet();
+        $fileRead = $xls->load('documents/faculties/Ecomomicy, bisnesy ta kontroly(Economica).xlsx');
+        $worksheet = $fileRead->getActiveSheet()->toArray(null, true, true, true);
+        foreach ($worksheet as $row) {
+            $fullNameArray = explode(' ', $row['A']);
+            $name = $fullNameArray[0];
+            $surname = $fullNameArray[1];
+            $patronymic = $fullNameArray[2];
+            $lastPlaceStudy = $row['C'];
+            $redDiploma = $row['D'];
+            $yearAdmission = $row['E'];
+            $typeTraining = $row['F'];
+            dd($row);
+        }
+
     }
 
 }
