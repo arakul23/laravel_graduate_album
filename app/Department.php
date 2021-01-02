@@ -13,6 +13,10 @@ class Department extends Model
         return $this->hasOne('app/Faculty');
     }
 
+    public function byViews() {
+        return Department::orderByDesc('count_views')->take(5)->get();
+    }
+
     protected $table = 'departments';
 
 }

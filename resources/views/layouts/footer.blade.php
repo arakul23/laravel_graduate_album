@@ -12,15 +12,17 @@
                 <div class="probootstrap-footer-widget">
                     <h3>Часто просматриваемые факультеты</h3>
                     <ul class="probootstrap-product-list">
-                        <li>
-                            <a href="#">
-                                <figure><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-                                <div class="text">
-                                    <h4>Название</h4>
-                                    <p>Кол-во просмотров</p>
-                                </div>
-                            </a>
-                        </li>
+                        @foreach($facultiesByViews as $faculty)
+                            <li>
+                                <a href="{{route('departments', ['id' =>  $faculty['id']])}}">
+                                    <figure><img src="{{$faculty['photo']}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                                    <div class="text">
+                                        <h4>{{$faculty['name']}}</h4>
+                                        <p>Количество просмотров: {{$faculty['count_views']}}</p>
+                                    </div>
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -28,15 +30,17 @@
                 <div class="probootstrap-footer-widget">
                     <h3>Часто просматриваемые специальности</h3>
                     <ul class="probootstrap-blog-list">
-                        <li>
-                            <a href="#">
-                                <figure><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-                                <div class="text">
-                                    <h4>Название</h4>
-                                    <p>Кол-во просмотров</p>
-                                </div>
-                            </a>
-                        </li>
+                        @foreach($departmentsByViews as $department)
+                            <li>
+                                <a href="{{route('students', ['id' =>  $department['id']])}}">
+                                    <figure><img src="{{$department['photo']}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                                    <div class="text">
+                                        <h4>{{$department['name']}}</h4>
+                                        <p>Количество просмотров {{$department['count_views']}}</p>
+                                    </div>
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

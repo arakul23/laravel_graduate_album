@@ -13,16 +13,13 @@
 
 use App\Faculty;
 
-Route::get('/', function () {
-    $faculties = Faculty::all();
-    return view('index', ["faculties" => $faculties]);
-});
+Route::get('/', 'IndexController@index');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/departments/{id}', 'FacultyController@getDepartmentsByFacultyId');
-Route::get('/students/{id}', 'departmentController@getStudentsByDepartmentId');
+Route::get('/departments/{id}', 'FacultyController@getDepartmentsByFacultyId')->name('departments');
+Route::get('/students/{id}', 'departmentController@getStudentsByDepartmentId')->name('students');
 Route::get('/studentInfo/{id}', 'StudentController@getById');
 Route::get('/parseCountries', 'CountryController@parseCountriesFile');
 Route::get('/parseRegions', 'ServiceController@parseRegionsFile');
@@ -30,5 +27,3 @@ Route::get('/parseRegionsProvinciesCitiesFile', 'ServiceController@parseRegionsP
 Route::get('/admin', function() {
   return view('admin/dashboard');
 });
-
-Route::view('/portfolio', 'portfolio');

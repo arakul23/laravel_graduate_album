@@ -20,7 +20,9 @@ class DepartmentController extends Controller
 
         $this->incrementViews($departmentId, $department);
 
-        return view ("students", ["students" => $studentList]);
+        return view ("students", [
+            "students" => $studentList,
+        ]);
     }
 
     public function incrementViews(int $id, object $model) {

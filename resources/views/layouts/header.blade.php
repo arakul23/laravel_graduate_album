@@ -1,6 +1,6 @@
 <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-        <a href="index.html" class="probootstrap-logo">Format<span>.</span></a>
+        <a href="{{url('/')}}" class="probootstrap-logo">Format<span>.</span></a>
 
         <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
         <div class="mobile-menu-overlay"></div>

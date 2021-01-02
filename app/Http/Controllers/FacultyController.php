@@ -18,7 +18,9 @@ class FacultyController extends Controller
 
         $this->incrementViews($facultyId, $faculty);
 
-        return view ("departments", ["departments" => $departmentsList]);
+        return view ("departments", [
+            "departments" => $departmentsList
+        ]);
     }
 
     public function incrementViews(int $id, object $model)

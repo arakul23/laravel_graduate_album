@@ -14,4 +14,8 @@ class Faculty extends Model
     public function departments() {
         return $this->hasMany('app\Department');
     }
+
+    public function byViews() {
+        return Faculty::orderByDesc('count_views')->take(5)->get();
+    }
 }
