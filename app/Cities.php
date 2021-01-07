@@ -33,4 +33,8 @@ class Cities extends Model
         return true;
     }
 
+    public function byName(string $name) {
+        return Cities::where('name', $name)->get();
+    }
+
 }

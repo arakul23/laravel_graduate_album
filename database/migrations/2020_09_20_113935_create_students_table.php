@@ -18,10 +18,16 @@ class CreateStudentsTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('patronymic');
-            $table->integer('country_id')->unsigned();
+            $table->integer('province_id')->unsigned();
+            $table->integer('region_id')->unsigned();
             $table->integer('city_id')->unsigned();
+            $table->integer('country_id')->unsigned();
             $table->integer('faculty_id')->unsigned();
             $table->integer('department_id')->unsigned();
+            $table->string('last_place_study');
+            $table->boolean('red_diploma');
+            $table->year('year_admission');
+            $table->string('type_training');
             $table->integer('count_views')->default(0);
             $table->timestamps();
         });

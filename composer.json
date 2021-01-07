@@ -25,6 +25,7 @@
         "predis/predis": "~1.0"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.9",
         "facade/ignition": "^2.3.6",
         "fzaninotto/faker": "^1.4",
         "laravel/ui": "^3.0",

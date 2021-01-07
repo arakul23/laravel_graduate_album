@@ -23,6 +23,7 @@ Route::get('/students/{id}', 'departmentController@getStudentsByDepartmentId')->
 Route::get('/studentInfo/{id}', 'StudentController@getById');
 Route::get('/parseCountries', 'CountryController@parseCountriesFile');
 Route::get('/parseRegions', 'ServiceController@parseRegionsFile');
+Route::get('/parseStudents', 'StudentController@parse');
 Route::get('/parseRegionsProvinciesCitiesFile', 'ServiceController@parseRegionsProvinciesCitiesFile');
 Route::get('/admin', function() {
   return view('admin/dashboard');

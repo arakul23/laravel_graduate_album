@@ -21,4 +21,8 @@ class Country extends Model
     $country->name = trim($name);
     $country->save();
   }
+
+    public function byName(string $name) {
+        return Country::where('name', $name)->get();
+    }
 }

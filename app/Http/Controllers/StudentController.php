@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Events\incrementViews;
-use Illuminate\Http\Request;
 use App\Student;
+use Illuminate\Http\Request;
+use App\Services\Parser\StudentsParser;
 
 class StudentController extends Controller
 {
@@ -23,4 +24,7 @@ class StudentController extends Controller
         incrementViews::dispatch($id, $model);
     }
 
+    public function parse(StudentsParser $parser) {
+        $parser->parse();
+    }
 }
