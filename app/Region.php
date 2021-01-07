@@ -32,4 +32,7 @@ class Region extends Model
         return true;
     }
 
+    public function byName(string $name) {
+        return Region::where('name', $name)->get();
+    }
 }

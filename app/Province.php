@@ -36,4 +36,8 @@ class Province extends Model
 
         return true;
     }
+
+    public function byName(string $name) {
+       return Province::where('name', $name)->get();
+    }
 }
