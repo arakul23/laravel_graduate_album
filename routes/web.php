@@ -19,7 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/departments/{id}', 'FacultyController@getDepartmentsByFacultyId')->name('departments');
+Route::get('/departments', 'departmentController@getDepartmentsList')->name('departmentsList');
+Route::get('/faculties', 'facultyController@getFacultiesList')->name('faculties');
 Route::get('/students/{id}', 'departmentController@getStudentsByDepartmentId')->name('students');
+Route::get('/students', 'StudentController@getStudentsList')->name('studentsList');
 Route::get('/studentInfo/{id}', 'StudentController@getById');
 Route::get('/parseCountries', 'CountryController@parseCountriesFile');
 Route::get('/parseRegions', 'ServiceController@parseRegionsFile');

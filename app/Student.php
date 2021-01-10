@@ -53,7 +53,7 @@ class Student extends Model
 
     public function byDepartmentId($id)
     {
-        return Student::where('department_id', $id)->get();
+        return Student::where('department_id', $id)->paginate(15);
     }
 
     public function byId($id)

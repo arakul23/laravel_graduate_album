@@ -15,5 +15,6 @@
             @endforeach
         </div>
     </div>
+    {{ $students->links() }}
 </section>
 @include("layouts/footer")

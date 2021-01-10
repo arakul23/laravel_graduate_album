@@ -6,6 +6,7 @@ use App\Department;
 use App\Faculty;
 use Illuminate\Http\Request;
 use App\Events\incrementViews;
+use Illuminate\View\View;
 
 class FacultyController extends Controller
 {
@@ -21,6 +22,12 @@ class FacultyController extends Controller
         return view ("departments", [
             "departments" => $departmentsList
         ]);
+    }
+
+    public function getFacultiesList() : View {
+        $facultiesList = Faculty::paginate(15);
+
+        return view("faculties", ['faculties' => $facultiesList]);
     }
 
     public function incrementViews(int $id, object $model)

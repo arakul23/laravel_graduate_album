@@ -6,6 +6,7 @@ use App\Events\incrementViews;
 use App\Student;
 use Illuminate\Http\Request;
 use App\Services\Parser\StudentsParser;
+use Illuminate\View\View;
 
 class StudentController extends Controller
 {
@@ -19,6 +20,13 @@ class StudentController extends Controller
 
         return view ("studentInfo", ["studentInfo" => $studentInfo]);
     }
+
+    public function getStudentsList() : View {
+        $studentsList = Student::paginate(15);
+
+        return view("students", ['students' => $studentsList]);
+    }
+
 
     public function incrementViews(int $id, object $model) {
         incrementViews::dispatch($id, $model);

@@ -8,9 +8,9 @@
         <nav role="navigation" class="probootstrap-nav hidden-xs">
             <ul class="probootstrap-main-nav">
                 <li><a href="{{url('/')}}">Главная</a></li>
-                <li><a href="{{url('faculties')}}">Факультеты</a></li>
-                <li><a href="{{url('departments')}}">Специальности</a></li>
-                <li><a href="{{url('students')}}">Студенты</a></li>
+                <li><a href="{{route('faculties')}}">Факультеты</a></li>
+                <li><a href="{{route('departmentsList')}}">Специальности</a></li>
+                <li><a href="{{route('studentsList')}}">Студенты</a></li>
             </ul>
         </nav>
     </div>
